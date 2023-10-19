@@ -13,12 +13,15 @@ export default function Home() {
   }
   function clearData(){
     setSkill('')
+    setSkillId('')
   }
 
   const submitHandler = async () => {
       if(skillId != ''){
         const res = await updateSkill({ id: skillId, name: skill });
+        fetchSkills();
         clearData();
+        return 0;
       }
       
       await insertSkills({ name: skill });

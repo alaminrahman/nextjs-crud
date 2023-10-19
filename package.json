@@ -22,6 +22,6 @@
   },
   "devDependencies": {
     "daisyui": "^3.9.2",
-    "prisma": "^5.4.1"
+    "prisma": "^5.4.2"
   }
 }
