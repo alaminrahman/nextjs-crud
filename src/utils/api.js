@@ -1,11 +1,10 @@
-const baseURL = '';
+
 const headers = {
     'Content-Type' : 'application/json'
 };
 
-let endpoint = `${process.env.BASE_URL}/api/skills`;
 export async function skills(){
-    let res = await fetch('https://nextjs-crud-gpm8.vercel.app/api/skills');
+    let res = await fetch(`/api/skills`);
 
     if (!res.ok) {
         // Check for response status other than 200 OK
@@ -17,7 +16,7 @@ export async function skills(){
 
 
 export async function insertSkills(data = []){
-    await fetch('https://nextjs-crud-gpm8.vercel.app/api/skills', { 
+    await fetch(`/api/skills`, { 
         method: 'POST',
         headers: headers,
         body: JSON.stringify(data)
@@ -35,7 +34,7 @@ export async function insertSkills(data = []){
 
 export async function updateSkill(data){
 
-    await fetch('https://nextjs-crud-gpm8.vercel.app/api/skills', {
+    await fetch(`/api/skills`, {
         method: 'PUT',
         headers: headers,
         body: JSON.stringify(data)
@@ -57,7 +56,7 @@ export async function updateSkill(data){
 }
 
 export async function deleteSkill(id){
-    await fetch('https://nextjs-crud-gpm8.vercel.app/api/skills', {
+    await fetch(`/api/skills`, {
         method: 'DELETE',
         headers: headers,
         body: JSON.stringify({id: id})

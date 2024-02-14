@@ -34,7 +34,7 @@ export default function Home() {
     }, []);
 
     async function fetchSkills(){
-        let res = await fetch('https://nextjs-crud-gpm8.vercel.app/api/skills')
+        let res = await fetch(`/api/skills`)
         let data = await res.json();
         setSkillData(data)
     }
