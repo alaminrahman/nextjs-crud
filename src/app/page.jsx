@@ -76,7 +76,9 @@ export default function Home() {
               onChange={ skillChange } 
               className="input input-bordered w-full max-w-xs mx-2" />
 
-            <button className="btn" onClick={ submitHandler }>Submit</button>
+            <button className="btn" onClick={ submitHandler }>
+            Submit
+            </button>
         </div>
 
       </div>
